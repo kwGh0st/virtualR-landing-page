@@ -17,7 +17,7 @@ const Navbar = () => {
           </div>
           <ul className="hidden lg:flex ml-1 space-x-12">
             {navItems.map((item, index) => (
-              <li key={index}>
+              <li key={item.id}>
                 <a
                   href={item.href}
                   className="text-neutral-100 hover:text-primary-500"
@@ -48,8 +48,8 @@ const Navbar = () => {
         {mobileDrawerOpen && (
           <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
             <ul>
-              {navItems.map((item, index) => (
-                <li key={index} className="py-4">
+              {navItems.map((item) => (
+                <li key={item.id} className="py-4">
                   <a href={item.href}>{item.label}</a>
                 </li>
               ))}
