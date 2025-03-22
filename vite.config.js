@@ -5,8 +5,5 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  server: {
-    host: "192.168.1.101",
-    port: 3000,
-  },
+  base: "/virtualR-landing-page/",
 });
